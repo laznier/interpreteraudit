@@ -49,9 +49,14 @@
         /* Custom hamburger button */
         .navbar-toggler.custom-toggler {
             border: 1px solid var(--gold);
-            padding: 0.35rem 0.45rem;
-            border-radius: 6px;
+            padding: 0;
+            width: 2.4rem;
+            height: 2.4rem;
+            border-radius: 8px;
             background-color: var(--navy);
+            display: flex;
+            align-items: center;
+            justify-content: center;
         }
 
         .navbar-toggler.custom-toggler:focus {
@@ -59,25 +64,44 @@
         }
 
         .navbar-toggler-icon {
-            background-image: none;            /* Remove default Bootstrap icon */
-            width: 1.5rem;
+            background-image: none !important; /* remove default Bootstrap icon */
+            position: relative;
+            width: 1.4rem;
             height: 2px;
-            background-color: var(--gold);     /* Middle line */
-            box-shadow: 0 6px 0 var(--gold),   /* Top line */
-                        0 12px 0 var(--gold);  /* Bottom line */
+            background-color: var(--gold);     /* middle line */
+            border-radius: 999px;
+        }
+
+        .navbar-toggler-icon::before,
+        .navbar-toggler-icon::after {
+            content: '';
+            position: absolute;
+            left: 0;
+            width: 100%;
+            height: 2px;
+            background-color: var(--gold);
+            border-radius: 999px;
+        }
+
+        .navbar-toggler-icon::before {
+            top: -6px;   /* top line */
+        }
+
+        .navbar-toggler-icon::after {
+            top: 6px;    /* bottom line */
         }
 
         .navbar-toggler.custom-toggler:hover {
             background-color: var(--gold);
         }
 
-        .navbar-toggler.custom-toggler:hover .navbar-toggler-icon {
+        .navbar-toggler.custom-toggler:hover .navbar-toggler-icon,
+        .navbar-toggler.custom-toggler:hover .navbar-toggler-icon::before,
+        .navbar-toggler.custom-toggler:hover .navbar-toggler-icon::after {
             background-color: var(--navy);
-            box-shadow: 0 6px 0 var(--navy),
-                        0 12px 0 var(--navy);
         }
 
-        /* On mobile, keep menu background navy so it feels cohesive */
+        /* Collapsed menu background on mobile */
         @media (max-width: 991.98px) {
             .navbar-collapse {
                 background-color: var(--navy);
@@ -220,7 +244,7 @@
     <!-- NAVIGATION -->
     <nav class="navbar navbar-expand-lg fixed-top">
         <div class="container">
-            <a class="navbar-brand fs-4" href="#">Interpreter Audit</a>
+            <a class="navbar-brand fs-4" href="index.html">Interpreter Audit</a>
             
             <button class="navbar-toggler custom-toggler" type="button"
                     data-bs-toggle="collapse" data-bs-target="#navbarNav"
@@ -265,7 +289,7 @@
                         <h3>Post-Hearing Transcript Audit & Expert Declaration</h3>
                         <p>
                             Line-by-line comparison of the official English transcript against the original Russian audio recording.
-                            Deliverables include:
+                            Designed for motions to reopen, BIA appeals, and petitions for review where interpretation error is at issue.
                         </p>
                         <ul>
                             <li>Comprehensive error log with timestamps and severity classification</li>
@@ -273,6 +297,9 @@
                             <li>Summary of material errors affecting credibility findings or due process</li>
                             <li>Consultation on framing ineffective assistance of interpreter claims</li>
                         </ul>
+                        <a href="audit/" class="text-decoration-none" style="color:var(--gold);font-weight:600;">
+                            Learn more about the audit service →
+                        </a>
                     </div>
                 </div>
             </div>
@@ -280,25 +307,40 @@
             <div class="row g-4 mt-3">
                 <div class="col-md-4">
                     <div class="card p-4 h-100">
-                        <h5>Live Courtroom Interpreting</h5>
+                        <h5>
+                            <a href="live-interpreting/" class="text-decoration-none" style="color:inherit;">
+                                Live Courtroom Interpreting
+                            </a>
+                        </h5>
                         <p>
-                            Federally certified consecutive and simultaneous interpretation for immigration and federal court proceedings.
+                            Federally certified consecutive and, where appropriate, simultaneous interpreting for immigration
+                            and federal court proceedings.
                         </p>
                     </div>
                 </div>
                 <div class="col-md-4">
                     <div class="card p-4 h-100">
-                        <h5>Real-Time Monitoring</h5>
+                        <h5>
+                            <a href="monitoring/" class="text-decoration-none" style="color:inherit;">
+                                Real-Time Monitoring
+                            </a>
+                        </h5>
                         <p>
-                            Remote or in-person monitoring with contemporaneous notes and a post-hearing summary for counsel.
+                            On-site or remote monitoring of interpreted hearings with contemporaneous notes and a post-hearing
+                            summary for counsel.
                         </p>
                     </div>
                 </div>
                 <div class="col-md-4">
                     <div class="card p-4 h-100">
-                        <h5>Deposition & Consultation Interpretation</h5>
+                        <h5>
+                            <a href="depositions/" class="text-decoration-none" style="color:inherit;">
+                                Deposition & Consultation Interpretation
+                            </a>
+                        </h5>
                         <p>
-                            Accurate interpretation for attorney–client meetings, witness preparation, and settlement negotiations.
+                            Confidential interpretation for attorney–client meetings, witness preparation, depositions, and
+                            settlement discussions.
                         </p>
                     </div>
                 </div>
