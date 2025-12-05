@@ -1,0 +1,423 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Federally certified Russian court interpreter offering post-hearing transcript audits, expert affidavits, and declaration support for appeals based on interpretation error in immigration and federal cases.">
+    <title>Interpreter Audit | Expert Declaration & Post-Hearing Review Services</title>
+
+    <!-- Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Libre+Baskerville:wght@700&family=Source+Sans+Pro:wght@400;600;700&display=swap" rel="stylesheet">
+    <!-- Bootstrap -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    
+    <style>
+        :root {
+            --navy: #0f2640;
+            --gold: #b89b5e;
+            --gray: #555;
+            --light: #f8f9fa;
+        }
+
+        body {
+            font-family: 'Source Sans Pro', sans-serif;
+            color: #333;
+            line-height: 1.7;
+        }
+
+        h1, h2, h3, h4, h5 {
+            font-family: 'Libre Baskerville', serif;
+            color: var(--navy);
+        }
+
+        /* NAVBAR */
+        .navbar {
+            background: var(--navy);
+            padding: 1rem 0;
+            font-weight: 600;
+        }
+
+        .navbar-brand,
+        .nav-link {
+            color: white !important;
+        }
+
+        .nav-link:hover {
+            color: var(--gold) !important;
+        }
+
+        /* Custom hamburger button */
+        .navbar-toggler.custom-toggler {
+            border: 1px solid var(--gold);
+            padding: 0.35rem 0.45rem;
+            border-radius: 6px;
+            background-color: var(--navy);
+        }
+
+        .navbar-toggler.custom-toggler:focus {
+            box-shadow: none;
+        }
+
+        .navbar-toggler-icon {
+            background-image: none;            /* Remove default Bootstrap icon */
+            width: 1.5rem;
+            height: 2px;
+            background-color: var(--gold);     /* Middle line */
+            box-shadow: 0 6px 0 var(--gold),   /* Top line */
+                        0 12px 0 var(--gold);  /* Bottom line */
+        }
+
+        .navbar-toggler.custom-toggler:hover {
+            background-color: var(--gold);
+        }
+
+        .navbar-toggler.custom-toggler:hover .navbar-toggler-icon {
+            background-color: var(--navy);
+            box-shadow: 0 6px 0 var(--navy),
+                        0 12px 0 var(--navy);
+        }
+
+        /* On mobile, keep menu background navy so it feels cohesive */
+        @media (max-width: 991.98px) {
+            .navbar-collapse {
+                background-color: var(--navy);
+                padding: 0.5rem 1rem 1rem;
+            }
+        }
+
+        /* HERO */
+        .hero {
+            background: linear-gradient(rgba(0, 30, 60, 0.92), rgba(0, 30, 60, 0.92)),
+                        url('https://images.unsplash.com/photo-1589820289827-9d2f7e35c1c7?q=80&w=2100&auto=format&fit=crop')
+                        center/cover no-repeat;
+            color: white;
+            padding: 160px 0 120px;
+            text-align: center;
+        }
+
+        .hero h1 {
+            font-size: 3.2rem;
+            color: var(--gold);
+        }
+
+        .hero .lead {
+            font-size: 1.3rem;
+            max-width: 860px;
+            margin: 0 auto;
+        }
+
+        .btn-outline-gold {
+            border: 2px solid var(--gold);
+            color: var(--gold);
+            padding: 12px 32px;
+            border-radius: 4px;
+            font-weight: 600;
+            transition: all 0.3s;
+        }
+
+        .btn-outline-gold:hover {
+            background: var(--gold);
+            color: white;
+        }
+
+        /* SECTIONS */
+        section {
+            padding: 90px 0;
+        }
+
+        .section-title {
+            font-size: 2.6rem;
+            position: relative;
+            padding-bottom: 12px;
+            margin-bottom: 3rem;
+        }
+
+        .section-title::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 80px;
+            height: 3px;
+            background: var(--gold);
+        }
+
+        .card {
+            border: none;
+            box-shadow: 0 8px 25px rgba(0,0,0,0.08);
+            border-radius: 8px;
+            transition: transform 0.3s;
+        }
+
+        .card:hover {
+            transform: translateY(-8px);
+        }
+
+        .stat-box {
+            background: #f1f5f9;
+            padding: 2rem;
+            border-radius: 8px;
+            text-align: center;
+        }
+
+        .stat-number {
+            font-size: 3.5rem;
+            font-weight: 700;
+            color: var(--navy);
+        }
+
+        .download-box {
+            background: #f9f9f9;
+            border: 1px solid #dee2e6;
+            padding: 2rem;
+            border-radius: 8px;
+        }
+
+        .contact {
+            background: var(--navy);
+            color: white;
+        }
+
+        .contact .form-control {
+            background: rgba(255,255,255,0.1);
+            border-color: rgba(255,255,255,0.2);
+            color: white;
+        }
+
+        .contact .form-control::placeholder {
+            color: rgba(255,255,255,0.7);
+        }
+
+        .footer {
+            background: #111;
+            color: #aaa;
+            padding: 3rem 0 1.5rem;
+        }
+
+        .footer a {
+            color: var(--gold);
+            text-decoration: none;
+        }
+
+        .footer a:hover {
+            text-decoration: underline;
+        }
+
+        @media (max-width: 768px) {
+            .hero h1 {
+                font-size: 2.4rem;
+            }
+
+            .hero .lead {
+                font-size: 1.1rem;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- NAVIGATION -->
+    <nav class="navbar navbar-expand-lg fixed-top">
+        <div class="container">
+            <a class="navbar-brand fs-4" href="#">Interpreter Audit</a>
+            
+            <button class="navbar-toggler custom-toggler" type="button"
+                    data-bs-toggle="collapse" data-bs-target="#navbarNav"
+                    aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item"><a class="nav-link" href="#services">Services</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#experience">Experience</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#sample">Sample Affidavit</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#contact">Contact</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- HERO -->
+    <section class="hero text-center">
+        <div class="container">
+            <h1>Expert Post-Hearing Interpretation Review<br>& Declaration Services</h1>
+            <p class="lead mt-4">
+                Federally certified Russian court interpreter providing detailed transcript-versus-audio audits and expert declarations
+                for motions to reopen, BIA appeals, and petitions for review based on interpretation error.
+            </p>
+            <p class="lead">
+                Average finding: <strong>60–120</strong> material discrepancies per full merits hearing in immigration court.
+            </p>
+            <a href="#contact" class="btn btn-outline-gold mt-4">Request Case Evaluation</a>
+        </div>
+    </section>
+
+    <!-- SERVICES -->
+    <section id="services" class="bg-light">
+        <div class="container">
+            <h2 class="section-title text-center">Core Services</h2>
+
+            <div class="row g-5">
+                <div class="col-lg-8 mx-auto">
+                    <div class="card p-4">
+                        <h3>Post-Hearing Transcript Audit & Expert Declaration</h3>
+                        <p>
+                            Line-by-line comparison of the official English transcript against the original Russian audio recording.
+                            Deliverables include:
+                        </p>
+                        <ul>
+                            <li>Comprehensive error log with timestamps and severity classification</li>
+                            <li>Expert affidavit/declaration suitable for filing</li>
+                            <li>Summary of material errors affecting credibility findings or due process</li>
+                            <li>Consultation on framing ineffective assistance of interpreter claims</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <div class="row g-4 mt-3">
+                <div class="col-md-4">
+                    <div class="card p-4 h-100">
+                        <h5>Live Courtroom Interpreting</h5>
+                        <p>
+                            Federally certified consecutive and simultaneous interpretation for immigration and federal court proceedings.
+                        </p>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="card p-4 h-100">
+                        <h5>Real-Time Monitoring</h5>
+                        <p>
+                            Remote or in-person monitoring with contemporaneous notes and a post-hearing summary for counsel.
+                        </p>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="card p-4 h-100">
+                        <h5>Deposition & Consultation Interpretation</h5>
+                        <p>
+                            Accurate interpretation for attorney–client meetings, witness preparation, and settlement negotiations.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- EXPERIENCE & RESULTS -->
+    <section id="experience">
+        <div class="container">
+            <h2 class="section-title text-center">Professional Qualifications</h2>
+            <div class="row text-center g-4">
+                <div class="col-md-4">
+                    <div class="stat-box">
+                        <div class="stat-number">12+</div>
+                        <p class="fw-bold">Years Federal & Immigration Court Experience</p>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="stat-box">
+                        <div class="stat-number">90+</div>
+                        <p class="fw-bold">Average Interpretation Issues Found per Audit</p>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="stat-box">
+                        <div class="stat-number">100+</div>
+                        <p class="fw-bold">Court Cases Interpreted Across 10+ States (Immigration, Federal, Criminal, Civil)</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="text-center mt-5">
+                <p class="lead">
+                    Federally Certified Court Interpreter (Russian ↔ English)<br>
+                    Experience in immigration, federal, criminal, and civil proceedings nationwide.
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <!-- SAMPLE AFFIDAVIT -->
+    <section id="sample" class="bg-light">
+        <div class="container">
+            <h2 class="section-title text-center">Sample Expert Affidavit</h2>
+            <div class="row justify-content-center">
+                <div class="col-lg-8">
+                    <div class="download-box text-center">
+                        <p class="lead mb-4">
+                            Download a redacted expert declaration demonstrating how interpretation discrepancies are documented
+                            and presented for motions to reopen and appeals.
+                        </p>
+                        <a href="/files/Sample_Interpreter_Error_Declaration_Redacted.pdf"
+                           class="btn btn-outline-gold btn-lg" download>
+                           Download Sample Affidavit (PDF)
+                        </a>
+                        <p class="text-muted mt-3 small">File size: 340 KB • Last updated: November 2025</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CONTACT -->
+    <section id="contact" class="contact text-center">
+        <div class="container">
+            <h2 class="section-title text-white">Contact for Case Evaluation</h2>
+            <div class="row justify-content-center">
+                <div class="col-lg-7">
+                    <p class="lead text-white opacity-90">
+                        Submit case details and audio/transcript files for a complimentary preliminary review
+                        (typically returned within 48 hours).
+                    </p>
+                    <form action="https://formspree.io/f/your-id-here" method="POST" class="mt-5">
+                        <div class="row g-3">
+                            <div class="col-md-6">
+                                <input type="text" name="name" class="form-control" placeholder="Name" required>
+                            </div>
+                            <div class="col-md-6">
+                                <input type="email" name="_replyto" class="form-control" placeholder="Email" required>
+                            </div>
+                            <div class="col-12">
+                                <textarea name="message" class="form-control" rows="5"
+                                          placeholder="Brief case summary and specific needs" required></textarea>
+                            </div>
+                            <div class="col-12">
+                                <button type="submit" class="btn btn-outline-gold px-5">Send Inquiry</button>
+                            </div>
+                        </div>
+                    </form>
+                    <p class="mt-4">
+                        Direct email:
+                        <a href="mailto:cases@interpreteraudit.com" style="color:var(--gold)">
+                            cases@interpreteraudit.com
+                        </a>
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer class="footer text-center text-md-start">
+        <div class="container">
+            <div class="row align-items-center gy-3">
+                <div class="col-md-6">
+                    <small>© 2025 Interpreter Audit. All rights reserved.</small>
+                </div>
+                <div class="col-md-6 text-md-end">
+                    <small>
+                        <a href="#">Privacy Policy</a> •
+                        <a href="#">Terms of Engagement</a>
+                    </small>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
