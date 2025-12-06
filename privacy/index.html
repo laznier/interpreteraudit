@@ -3,259 +3,207 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Privacy Policy for Interpreter Audit services.">
+    <meta name="description" content="Privacy Policy for Interpreter Audit services, including how case information and uploaded materials are handled.">
     <title>Privacy Policy | Interpreter Audit</title>
 
     <!-- Fonts -->
     <link href="https://fonts.googleapis.com/css2?family=Libre+Baskerville:wght@700&family=Source+Sans+Pro:wght@400;600;700&display=swap" rel="stylesheet">
     <!-- Bootstrap -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
-    
-    <style>
-        :root {
-            --navy: #0f2640;
-            --gold: #b89b5e;
-            --gray: #555;
-            --light: #f8f9fa;
-        }
-
-        body {
-            font-family: 'Source Sans Pro', sans-serif;
-            color: #333;
-            line-height: 1.7;
-        }
-
-        h1, h2, h3, h4, h5 {
-            font-family: 'Libre Baskerville', serif;
-            color: var(--navy);
-        }
-
-        /* NAVBAR */
-        .navbar {
-            background: var(--navy);
-            padding: 1rem 0;
-            font-weight: 600;
-        }
-
-        .navbar-brand,
-        .nav-link {
-            color: white !important;
-        }
-
-        .nav-link:hover {
-            color: var(--gold) !important;
-        }
-
-        /* Collapsed menu background on mobile */
-        @media (max-width: 991.98px) {
-            .navbar-collapse {
-                background-color: var(--navy);
-                padding: 0.5rem 1rem 1rem;
-            }
-
-            /* Custom hamburger button */
-            .navbar-toggler.custom-toggler {
-                border: 1px solid var(--gold);
-                padding: 0;
-                width: 2.4rem;
-                height: 2.4rem;
-                border-radius: 8px;
-                background-color: var(--navy);
-                display: flex;
-                align-items: center;
-                justify-content: center;
-            }
-
-            .navbar-toggler.custom-toggler:focus {
-                box-shadow: none;
-            }
-
-            .navbar-toggler-icon {
-                background-image: none !important; /* remove default Bootstrap icon */
-                position: relative;
-                width: 1.4rem;
-                height: 2px;
-                background-color: var(--gold);     /* middle line */
-                border-radius: 999px;
-            }
-
-            .navbar-toggler-icon::before,
-            .navbar-toggler-icon::after {
-                content: '';
-                position: absolute;
-                left: 0;
-                width: 100%;
-                height: 2px;
-                background-color: var(--gold);
-                border-radius: 999px;
-            }
-
-            .navbar-toggler-icon::before {
-                top: -6px;   /* top line */
-            }
-
-            .navbar-toggler-icon::after {
-                top: 6px;    /* bottom line */
-            }
-
-            .navbar-toggler.custom-toggler:hover {
-                background-color: var(--gold);
-            }
-
-            .navbar-toggler.custom-toggler:hover .navbar-toggler-icon,
-            .navbar-toggler.custom-toggler:hover .navbar-toggler-icon::before,
-            .navbar-toggler.custom-toggler:hover .navbar-toggler-icon::after {
-                background-color: var(--navy);
-            }
-        }
-
-        /* SECTIONS */
-        section {
-            padding: 90px 0;
-        }
-
-        .section-title {
-            font-size: 2.6rem;
-            position: relative;
-            padding-bottom: 12px;
-            margin-bottom: 3rem;
-        }
-
-        .section-title::after {
-            content: '';
-            position: absolute;
-            bottom: 0;
-            left: 50%;
-            transform: translateX(-50%);
-            width: 80px;
-            height: 3px;
-            background: var(--gold);
-        }
-
-        .btn-outline-gold {
-            border: 2px solid var(--gold);
-            color: var(--gold);
-            padding: 12px 32px;
-            border-radius: 4px;
-            font-weight: 600;
-            transition: all 0.3s;
-        }
-
-        .btn-outline-gold:hover {
-            background: var(--gold);
-            color: white;
-        }
-
-        .footer {
-            background: #111;
-            color: #aaa;
-            padding: 3rem 0 1.5rem;
-        }
-
-        .footer a {
-            color: var(--gold);
-            text-decoration: none;
-        }
-
-        .footer a:hover {
-            text-decoration: underline;
-        }
-
-        @media (max-width: 768px) {
-            .hero h1 {
-                font-size: 2.4rem;
-            }
-
-            .hero .lead {
-                font-size: 1.1rem;
-            }
-        }
-    </style>
+    <!-- Shared site styles -->
+    <link rel="stylesheet" href="/assets/css/sites.css">
+    <!-- Favicon (optional, if present at root) -->
+    <link rel="icon" type="image/png" href="/favicon.png">
 </head>
-<body>
+<body data-page="privacy">
 
-    <!-- NAVIGATION -->
-    <nav class="navbar navbar-expand-lg fixed-top">
+    <!-- NAVBAR PLACEHOLDER (filled by navbar.html) -->
+    <div id="navbar-placeholder"></div>
+
+    <!-- HERO (inner page style) -->
+    <section class="hero-small">
         <div class="container">
-            <a class="navbar-brand fs-4" href="index.html">Interpreter Audit</a>
-            
-            <button class="navbar-toggler custom-toggler" type="button"
-                    data-bs-toggle="collapse" data-bs-target="#navbarNav"
-                    aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon"></span>
-            </button>
-
-            <div class="collapse navbar-collapse" id="navbarNav">
-                <ul class="navbar-nav ms-auto">
-                    <li class="nav-item"><a class="nav-link" href="index.html#services">Services</a></li>
-                    <li class="nav-item"><a class="nav-link" href="index.html#experience">Experience</a></li>
-                    <li class="nav-item"><a class="nav-link" href="index.html#sample">Sample Affidavit</a></li>
-                    <li class="nav-item"><a class="nav-link" href="https://www.interpreteraudit.com/contact">Contact</a></li>
-                </ul>
-            </div>
+            <p class="pill mb-2">Policy</p>
+            <h1>Privacy Policy</h1>
+            <p class="lead">
+                How Interpreter Audit collects, uses, and protects case information, uploaded materials, 
+                and contact details shared through this site and related services.
+            </p>
         </div>
-    </nav>
+    </section>
 
-    <!-- PRIVACY POLICY -->
+    <!-- PRIVACY POLICY CONTENT -->
     <section id="privacy" class="bg-light">
         <div class="container">
-            <h2 class="section-title text-center">Privacy Policy</h2>
             <div class="row justify-content-center">
                 <div class="col-lg-10">
+                    <h2 class="section-title">How We Handle Your Information</h2>
+
                     <p><strong>Last updated: December 05, 2025</strong></p>
-                    <p>This privacy notice for Interpreter Audit ("we," "us," or "our"), describes how and why we might collect, store, use, and/or share ("process") your information when you use our services ("Services"), such as when you:</p>
+                    <p>
+                        This privacy notice for <strong>Interpreter Audit</strong> ("we," "us," or "our")
+                        describes how and why we might collect, store, use, and/or share ("process") your
+                        information when you use our services ("Services"), such as when you:
+                    </p>
                     <ul>
-                        <li>Visit our website at interpreteraudit.com, or any website of ours that links to this privacy notice</li>
+                        <li>Visit our website at <strong>interpreteraudit.com</strong>, or any website of ours that links to this privacy notice</li>
                         <li>Engage with us in other related ways, including any sales, marketing, or events</li>
                     </ul>
-                    <p><strong>Questions or concerns?</strong> Reading this privacy notice will help you understand your privacy rights and choices. If you do not agree with our policies and practices, please do not use our Services. If you still have any questions or concerns, please contact us at cases@interpreteraudit.com.</p>
+                    <p>
+                        <strong>Questions or concerns?</strong> Reading this privacy notice will help you
+                        understand your privacy rights and choices. If you do not agree with our policies and
+                        practices, please do not use our Services. If you still have any questions or concerns,
+                        please contact us at <a href="mailto:cases@interpreteraudit.com">cases@interpreteraudit.com</a>.
+                    </p>
 
                     <h3>1. What Information Do We Collect?</h3>
-                    <p>We collect personal information that you voluntarily provide to us when you express an interest in obtaining information about us or our products and Services, when you participate in activities on the Services, or otherwise when you contact us.</p>
-                    <p><strong>Personal Information Provided by You.</strong> The personal information that we collect depends on the context of your interactions with us and the Services, the choices you make, and the products and features you use. The personal information we collect may include the following:</p>
+                    <p>
+                        We collect personal information that you voluntarily provide to us when you express an
+                        interest in obtaining information about us or our products and Services, when you
+                        participate in activities on the Services, or otherwise when you contact us.
+                    </p>
+                    <p>
+                        <strong>Personal Information Provided by You.</strong> The personal information that we
+                        collect depends on the context of your interactions with us and the Services, the choices
+                        you make, and the products and features you use. The personal information we collect may
+                        include the following:
+                    </p>
                     <ul>
                         <li>Names</li>
                         <li>Email addresses</li>
+                        <li>Phone numbers</li>
+                        <li>Law firm or organization name</li>
                         <li>Case summaries and messages</li>
                         <li>Uploaded files (e.g., audio recordings, transcripts, legal documents containing sensitive information)</li>
                     </ul>
-                    <p><strong>Sensitive Information.</strong> When necessary, with your consent or as otherwise permitted by applicable law, we process the following categories of sensitive information:</p>
+                    <p>
+                        <strong>Sensitive Information.</strong> When necessary, with your consent or as otherwise
+                        permitted by applicable law, we process the following categories of sensitive information:
+                    </p>
                     <ul>
-                        <li>Legal case details, audio recordings that may include personal identifiers, health data, or other protected information related to immigration or federal cases</li>
+                        <li>
+                            Legal case details, audio recordings that may include personal identifiers, health
+                            data, or other protected information related to immigration or federal cases
+                        </li>
                     </ul>
-                    <p>All personal information that you provide to us must be true, complete, and accurate, and you must notify us of any changes to such personal information.</p>
+                    <p>
+                        All personal information that you provide to us must be true, complete, and accurate, and
+                        you must notify us of any changes to such personal information.
+                    </p>
 
                     <h3>2. How Do We Process Your Information?</h3>
-                    <p>We process your personal information for a variety of reasons, depending on how you interact with our Services, including:</p>
+                    <p>
+                        We process your personal information for a variety of reasons, depending on how you
+                        interact with our Services, including:
+                    </p>
                     <ul>
-                        <li>To deliver and facilitate delivery of services to the user, such as conducting post-hearing transcript audits and providing expert declarations.</li>
-                        <li>To respond to user inquiries/offer support to users.</li>
-                        <li>To comply with our legal obligations.</li>
+                        <li>
+                            To deliver and facilitate delivery of services to you, such as conducting post-hearing
+                            transcript audits and providing expert declarations.
+                        </li>
+                        <li>To respond to inquiries and provide support.</li>
+                        <li>To maintain records for billing, conflicts checks, and case tracking.</li>
+                        <li>To comply with our legal and ethical obligations.</li>
                     </ul>
 
                     <h3>3. What Legal Bases Do We Rely On To Process Your Information?</h3>
-                    <p>We only process your personal information when we believe it is necessary and we have a valid legal reason (i.e., legal basis) to do so under applicable law, like with your consent, to comply with laws, to provide you with services, to enter into or fulfill our contractual obligations, to protect your rights, or to fulfill our legitimate business interests.</p>
+                    <p>
+                        We only process your personal information when we believe it is necessary and we have a
+                        valid legal reason (i.e., legal basis) to do so under applicable law, such as:
+                    </p>
+                    <ul>
+                        <li>With your consent.</li>
+                        <li>To fulfill our contractual obligations or take steps at your request prior to entering into a contract.</li>
+                        <li>To comply with applicable laws and regulations.</li>
+                        <li>To protect your vital interests or those of another person.</li>
+                        <li>To pursue our legitimate business interests in a manner that does not override your fundamental rights and freedoms.</li>
+                    </ul>
 
                     <h3>4. When And With Whom Do We Share Your Personal Information?</h3>
-                    <p>We may share information in specific situations described in this section and/or with the following third parties: cloud storage providers for file uploads, email services for notifications. We require those third parties to keep personal information confidential and secure and to use it only for the purposes we specify.</p>
+                    <p>
+                        We may share information in specific situations described in this section and/or with the
+                        following third parties:
+                    </p>
+                    <ul>
+                        <li>Cloud storage providers for receiving and storing file uploads.</li>
+                        <li>Email service providers for sending notifications and correspondence.</li>
+                        <li>
+                            Professional advisors (such as legal or IT security consultants) where reasonably
+                            necessary to support our services.
+                        </li>
+                    </ul>
+                    <p>
+                        We require third parties to keep personal information confidential and secure and to use
+                        it only for the purposes we specify.
+                    </p>
 
                     <h3>5. How Long Do We Keep Your Information?</h3>
-                    <p>We keep your information for as long as necessary to fulfill the purposes outlined in this privacy notice unless otherwise required by law. We will only keep your personal information for as long as it is necessary for the purposes set out in this privacy notice, unless a longer retention period is required or permitted by law (such as tax, accounting, or other legal requirements).</p>
+                    <p>
+                        We keep your information for as long as necessary to fulfill the purposes outlined in this
+                        privacy notice unless otherwise required by law. We will only keep your personal
+                        information for as long as it is necessary for the purposes set out in this privacy
+                        notice, unless a longer retention period is required or permitted by law (such as tax,
+                        accounting, or other legal requirements).
+                    </p>
 
                     <h3>6. How Do We Keep Your Information Safe?</h3>
-                    <p>We have implemented appropriate and reasonable technical and organizational security measures designed to protect the security of any personal information we process, including encryption for sensitive files and access controls. However, despite our safeguards and efforts to secure your information, no electronic transmission over the Internet or information storage technology can be guaranteed to be 100% secure.</p>
+                    <p>
+                        We have implemented appropriate and reasonable technical and organizational security
+                        measures designed to protect the security of any personal information we process, including:
+                    </p>
+                    <ul>
+                        <li>Use of encryption or secure portals for sensitive file uploads where appropriate.</li>
+                        <li>Restricted access to case materials and stored files.</li>
+                        <li>Reasonable retention and deletion practices for case records.</li>
+                    </ul>
+                    <p>
+                        However, despite our safeguards and efforts to secure your information, no electronic
+                        transmission over the Internet or information storage technology can be guaranteed to be
+                        100% secure. You should only transmit sensitive information through channels you are
+                        comfortable with and that we have confirmed as appropriate for your case.
+                    </p>
 
                     <h3>7. What Are Your Privacy Rights?</h3>
-                    <p>In some regions (like the EEA, UK, and Canada), you have rights that allow you greater access to and control over your personal information. You may review, change, or terminate your account at any time. You have the right to request access to, correction of, or deletion of your personal information.</p>
+                    <p>
+                        In some regions (like the EEA, UK, and Canada), you may have rights that allow you
+                        greater access to and control over your personal information. These may include the right
+                        to:
+                    </p>
+                    <ul>
+                        <li>Request access to personal information we hold about you.</li>
+                        <li>Request correction of inaccurate or incomplete information.</li>
+                        <li>Request deletion of your personal information, subject to legal and ethical obligations.</li>
+                        <li>Object to or restrict certain types of processing.</li>
+                    </ul>
+                    <p>
+                        To exercise any of these rights, you may contact us at
+                        <a href="mailto:cases@interpreteraudit.com">cases@interpreteraudit.com</a>. We will
+                        consider and act upon any request in accordance with applicable data protection laws.
+                    </p>
 
                     <h3>8. Controls For Do-Not-Track Features</h3>
-                    <p>We do not currently respond to DNT browser signals or any other mechanism that automatically communicates your choice not to be tracked online.</p>
+                    <p>
+                        Most web browsers and some mobile operating systems and mobile applications include a
+                        Do-Not-Track ("DNT") feature or setting you can activate to signal your privacy preference
+                        not to have data about your online browsing activities monitored and collected. At this
+                        stage, no uniform technology standard for recognizing and implementing DNT signals has
+                        been finalized; therefore, we do not currently respond to DNT browser signals or any other
+                        mechanism that automatically communicates your choice not to be tracked online.
+                    </p>
 
                     <h3>9. Do We Make Updates To This Notice?</h3>
-                    <p>Yes, we will update this notice as necessary to stay compliant with relevant laws. The updated version will be indicated by an updated "Revised" date.</p>
+                    <p>
+                        Yes. We will update this notice as necessary to stay compliant with relevant laws and to
+                        reflect any material changes in how we handle information. The updated version will be
+                        indicated by an updated "Last updated" date at the top of this page. We encourage you to
+                        review this privacy notice periodically.
+                    </p>
 
                     <h3>10. How Can You Contact Us About This Notice?</h3>
-                    <p>If you have questions or comments about this notice, you may email us at cases@interpreteraudit.com.</p>
+                    <p>
+                        If you have questions or comments about this notice, you may email us at
+                        <a href="mailto:cases@interpreteraudit.com">cases@interpreteraudit.com</a>.
+                    </p>
                 </div>
             </div>
         </div>
@@ -280,17 +228,43 @@
 
     <!-- Bootstrap JS -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+
+    <!-- Load shared navbar + highlight active link -->
     <script>
-        // Close navbar on nav link click (for mobile)
-        const navLinks = document.querySelectorAll('.navbar-nav .nav-link');
-        const navbarCollapse = document.querySelector('.navbar-collapse');
-        navLinks.forEach(link => {
-            link.addEventListener('click', () => {
-                if (navbarCollapse.classList.contains('show')) {
-                    new bootstrap.Collapse(navbarCollapse).hide();
-                }
-            });
-        });
+        (function() {
+            const placeholder = document.getElementById('navbar-placeholder');
+            if (!placeholder) return;
+
+            fetch('/navbar.html')
+                .then(response => response.text())
+                .then(html => {
+                    placeholder.innerHTML = html;
+
+                    // Mark the current page's nav link as active
+                    const page = document.body.dataset.page;
+                    if (page) {
+                        const link = document.querySelector('.navbar-nav .nav-link[data-page="' + page + '"]');
+                        if (link) {
+                            link.classList.add('active');
+                            link.setAttribute('aria-current', 'page');
+                        }
+                    }
+
+                    // Close navbar on nav link click (for mobile)
+                    const navLinks = document.querySelectorAll('.navbar-nav .nav-link');
+                    const navbarCollapse = document.querySelector('.navbar-collapse');
+                    navLinks.forEach(link => {
+                        link.addEventListener('click', () => {
+                            if (navbarCollapse && navbarCollapse.classList.contains('show')) {
+                                new bootstrap.Collapse(navbarCollapse).hide();
+                            }
+                        });
+                    });
+                })
+                .catch(err => {
+                    console.error('Failed to load navbar:', err);
+                });
+        })();
     </script>
 </body>
 </html>

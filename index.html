@@ -36,316 +36,59 @@
     <!-- Bootstrap -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
     
-    <style>
-        :root {
-            --navy: #0f2640;
-            --gold: #b89b5e;
-            --gray: #555;
-            --light: #f8f9fa;
-        }
-
-        body {
-            font-family: 'Source Sans Pro', sans-serif;
-            color: #333;
-            line-height: 1.7;
-        }
-
-        h1, h2, h3, h4, h5 {
-            font-family: 'Libre Baskerville', serif;
-            color: var(--navy);
-        }
-
-        /* NAVBAR */
-        .navbar {
-            background: var(--navy);
-            padding: 1rem 0;
-            font-weight: 600;
-        }
-
-        .navbar-brand,
-        .nav-link {
-            color: white !important;
-        }
-
-        .navbar-brand-gif {
-            height: 64px;
-            width: auto;
-            display: block;
-            object-fit: contain;
-        }
-
-        @media (max-width: 576px) {
-            .navbar-brand-gif {
-                height: 48px;
-            }
-        }
-
-        .nav-link:hover {
-            color: var(--gold) !important;
-        }
-
-        /* Collapsed menu background on mobile */
-        @media (max-width: 991.98px) {
-            .navbar-collapse {
-                background-color: var(--navy);
-                padding: 0.5rem 1rem 1rem;
-            }
-
-            /* Custom hamburger button */
-            .navbar-toggler.custom-toggler {
-                border: 1px solid var(--gold);
-                padding: 0;
-                width: 2.4rem;
-                height: 2.4rem;
-                border-radius: 8px;
-                background-color: var(--navy);
-                display: flex;
-                align-items: center;
-                justify-content: center;
-            }
-
-            .navbar-toggler.custom-toggler:focus {
-                box-shadow: none;
-            }
-
-            .navbar-toggler-icon {
-                background-image: none !important; /* remove default Bootstrap icon */
-                position: relative;
-                width: 1.4rem;
-                height: 2px;
-                background-color: var(--gold);     /* middle line */
-                border-radius: 999px;
-            }
-
-            .navbar-toggler-icon::before,
-            .navbar-toggler-icon::after {
-                content: '';
-                position: absolute;
-                left: 0;
-                width: 100%;
-                height: 2px;
-                background-color: var(--gold);
-                border-radius: 999px;
-            }
-
-            .navbar-toggler-icon::before {
-                top: -6px;   /* top line */
-            }
-
-            .navbar-toggler-icon::after {
-                top: 6px;    /* bottom line */
-            }
-
-            .navbar-toggler.custom-toggler:hover {
-                background-color: var(--gold);
-            }
-
-            .navbar-toggler.custom-toggler:hover .navbar-toggler-icon,
-            .navbar-toggler.custom-toggler:hover .navbar-toggler-icon::before,
-            .navbar-toggler.custom-toggler:hover .navbar-toggler-icon::after {
-                background-color: var(--navy);
-            }
-        }
-
-        .visually-hidden {
-            position: absolute !important;
-            width: 1px;
-            height: 1px;
-            padding: 0;
-            margin: -1px;
-            overflow: hidden;
-            clip: rect(0, 0, 0, 0);
-            white-space: nowrap;
-            border: 0;
-        }
-
-        /* HERO */
-        .hero {
-            background: linear-gradient(rgba(0, 30, 60, 0.92), rgba(0, 30, 60, 0.92)),
-                        url('https://images.unsplash.com/photo-1589820289827-9d2f7e35c1c7?q=80&w=2100&auto=format&fit=crop')
-                        center/cover no-repeat;
-            color: white;
-            padding: 160px 0 120px;
-            text-align: center;
-        }
-
-        .hero h1 {
-            font-size: 3.2rem;
-            color: var(--gold);
-        }
-
-        .hero .lead {
-            font-size: 1.3rem;
-            max-width: 860px;
-            margin: 0 auto;
-        }
-
-        .btn-outline-gold {
-            border: 2px solid var(--gold);
-            color: var(--gold);
-            padding: 12px 32px;
-            border-radius: 4px;
-            font-weight: 600;
-            transition: all 0.3s;
-        }
-
-        .btn-outline-gold:hover {
-            background: var(--gold);
-            color: white;
-        }
-
-        /* SECTIONS */
-        section {
-            padding: 90px 0;
-        }
-
-        .section-title {
-            font-size: 2.6rem;
-            position: relative;
-            padding-bottom: 12px;
-            margin-bottom: 3rem;
-        }
-
-        .section-title::after {
-            content: '';
-            position: absolute;
-            bottom: 0;
-            left: 50%;
-            transform: translateX(-50%);
-            width: 80px;
-            height: 3px;
-            background: var(--gold);
-        }
-
-        .card {
-            border: none;
-            box-shadow: 0 8px 25px rgba(0,0,0,0.08);
-            border-radius: 8px;
-            transition: transform 0.3s;
-        }
-
-        .card:hover {
-            transform: translateY(-8px);
-        }
-
-        .stat-box {
-            background: #f1f5f9;
-            padding: 2rem;
-            border-radius: 8px;
-            text-align: center;
-        }
-
-        .stat-number {
-            font-size: 3.5rem;
-            font-weight: 700;
-            color: var(--navy);
-        }
-
-        .download-box {
-            background: #f9f9f9;
-            border: 1px solid #dee2e6;
-            padding: 2rem;
-            border-radius: 8px;
-        }
-
-        .contact {
-            background: var(--navy);
-            color: white;
-        }
-
-        .contact .form-control {
-            background: rgba(255,255,255,0.1);
-            border-color: rgba(255,255,255,0.2);
-            color: white;
-        }
-
-        .contact .form-control::placeholder {
-            color: rgba(255,255,255,0.7);
-        }
-
-        .footer {
-            background: #111;
-            color: #aaa;
-            padding: 3rem 0 1.5rem;
-        }
-
-        .footer a {
-            color: var(--gold);
-            text-decoration: none;
-        }
-
-        .footer a:hover {
-            text-decoration: underline;
-        }
-
-        /* About / Bio section */
-        .bio-photo {
-            max-width: 320px;
-            border-radius: 12px;
-            box-shadow: 0 12px 30px rgba(15, 23, 42, 0.25);
-            object-fit: cover;
-        }
-
-        .about-badge {
-            display: inline-block;
-            font-size: 0.8rem;
-            text-transform: uppercase;
-            letter-spacing: 0.08em;
-            padding: 0.25rem 0.75rem;
-            border-radius: 999px;
-            border: 1px solid var(--gold);
-            color: var(--gold);
-            margin-bottom: 0.75rem;
-        }
-
-        /* Video */
-        .intro-video {
-            border-radius: 12px;
-            overflow: hidden;
-            box-shadow: 0 12px 30px rgba(15, 23, 42, 0.25);
-        }
-
-        @media (max-width: 768px) {
-            .hero h1 {
-                font-size: 2.4rem;
-            }
-
-            .hero .lead {
-                font-size: 1.1rem;
-            }
-        }
-    </style>
+    <!-- Shared site styles -->
+    <link rel="stylesheet" href="/assets/css/sites.css">
+    
 </head>
 <body>
 
     <!-- NAVIGATION -->
-    <nav class="navbar navbar-expand-lg fixed-top">
-        <div class="container">
-            <!-- Brand: animated GIF logo -->
-            <a class="navbar-brand d-flex align-items-center" href="index.html">
-                <img src="interpreter_audit_hero.gif"
-                     alt="Interpreter Audit"
-                     class="navbar-brand-gif">
-                <span class="visually-hidden">Interpreter Audit</span>
-            </a>
+    <body data-page="home">
+    <div id="navbar-placeholder"></div>
 
-            <button class="navbar-toggler custom-toggler" type="button"
-                    data-bs-toggle="collapse" data-bs-target="#navbarNav"
-                    aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon"></span>
-            </button>
+        <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
 
-            <div class="collapse navbar-collapse" id="navbarNav">
-                <ul class="navbar-nav ms-auto">
-                    <li class="nav-item"><a class="nav-link" href="#services">Services</a></li>
-                    <li class="nav-item"><a class="nav-link" href="#experience">Experience</a></li>
-                    <li class="nav-item"><a class="nav-link" href="#about">Interpreter</a></li>
-                    <li class="nav-item"><a class="nav-link" href="#sample">Sample Affidavit</a></li>
-                    <li class="nav-item"><a class="nav-link" href="https://www.interpreteraudit.com/contact">Contact</a></li>
-                </ul>
-            </div>
-        </div>
-    </nav>
+    <!-- Load shared navbar -->
+    <script>
+        (function() {
+            const placeholder = document.getElementById('navbar-placeholder');
+            if (!placeholder) return;
+
+            fetch('/navbar.html')
+                .then(response => response.text())
+                .then(html => {
+                    placeholder.innerHTML = html;
+
+                    // Mark the current page's nav link as active
+                    const page = document.body.dataset.page;
+                    if (page) {
+                        const link = document.querySelector('.navbar-nav .nav-link[data-page="' + page + '"]');
+                        if (link) {
+                            link.classList.add('active');
+                            link.setAttribute('aria-current', 'page');
+                        }
+                    }
+
+                    // Re-wire the "close on click" behavior for mobile nav
+                    const navLinks = document.querySelectorAll('.navbar-nav .nav-link');
+                    const navbarCollapse = document.querySelector('.navbar-collapse');
+                    navLinks.forEach(link => {
+                        link.addEventListener('click', () => {
+                            if (navbarCollapse && navbarCollapse.classList.contains('show')) {
+                                new bootstrap.Collapse(navbarCollapse).hide();
+                            }
+                        });
+                    });
+                })
+                .catch(err => {
+                    console.error('Failed to load navbar:', err);
+                });
+        })();
+    </script>
+
+
+
 
     <!-- HERO -->
     <section class="hero text-center">
@@ -535,7 +278,7 @@
                 <p class="lead text-white opacity-90">
                     Use this form to share basic case details and request a complimentary preliminary review
                     (typically returned within 48 hours).
-                </p>
+                </p> <!--
                 <p class="small text-white-50 mb-1">
                     You may attach <strong>small supporting documents</strong> (for example, a scheduling notice,
                     short written order, or brief excerpt).
@@ -544,7 +287,7 @@
                     <strong>Do not send full hearing recordings, full transcripts, or documents containing extensive
                     personal or medical history through this form or by regular email.</strong> For those materials,
                     please use the secure upload link below after we acknowledge your inquiry.
-                </p>
+                </p> -->
 
                 <!-- CONTACT FORM via Formspree with small attachments -->
                 <form action="https://formspree.io/f/xkgdzyjz"
@@ -562,12 +305,16 @@
                             <input type="text" name="firm" class="form-control" placeholder="Law firm or organization (optional)">
                         </div>
                         <div class="col-12">
+                            <input type="tel" name="phone" class="form-control" placeholder="Phone number (optional)">
+                        </div>
+
+                        <div class="col-12">
                             <textarea name="message" class="form-control" rows="5"
                                       placeholder="Brief case summary and specific needs (hearing type, date, posture, etc.)"
                                       required></textarea>
                         </div>
 
-                        <!-- Small attachment(s) -->
+                        <!-- Small attachment(s) 
                         <div class="col-12 text-start">
                             <label for="attachments-main" class="form-label text-white">
                                 Attach small files (optional)
@@ -582,7 +329,7 @@
                                 Please keep total size modest (e.g., a few megabytes). For large audio files or full
                                 transcripts, use the secure upload link below instead of attaching here.
                             </small>
-                        </div>
+                        </div> -->
 
                         <!-- Formspree helpers -->
                         <input type="hidden" name="_subject" value="New Interpreter Audit case inquiry">
