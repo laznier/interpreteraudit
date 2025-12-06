@@ -3,8 +3,33 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Federally certified Russian court interpreter offering post-hearing transcript audits, expert affidavits, and declaration support for appeals based on interpretation error in immigration and federal cases.">
+
+    <!-- Primary SEO -->
     <title>Interpreter Audit | Expert Declaration & Post-Hearing Review Services</title>
+    <meta name="description" content="Federally certified Russian court interpreter providing detailed transcript-versus-audio audits and expert declarations for motions to reopen, BIA appeals, and petitions for review based on interpretation error.">
+    <meta name="author" content="Interpreter Audit">
+
+    <!-- Canonical -->
+    <link rel="canonical" href="https://www.interpreteraudit.com/">
+
+    <!-- Favicon / App Icons – Я thumbnails -->
+    <link rel="icon" type="image/png" sizes="32x32" href="/ya-favicon-32.png">
+    <link rel="icon" type="image/png" sizes="192x192" href="/ya-favicon-192.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="/ya-apple-180.png">
+
+    <!-- Open Graph -->
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="Interpreter Audit | Expert Declaration & Post-Hearing Review Services">
+    <meta property="og:description" content="Federally certified Russian court interpreter providing detailed transcript-versus-audio audits and expert declarations for motions to reopen, BIA appeals, and petitions for review based on interpretation error.">
+    <meta property="og:url" content="https://www.interpreteraudit.com/">
+    <meta property="og:image" content="https://www.interpreteraudit.com/ya-og-1200x630.png">
+    <meta property="og:site_name" content="Interpreter Audit">
+
+    <!-- Twitter -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Interpreter Audit | Expert Declaration & Post-Hearing Review Services">
+    <meta name="twitter:description" content="Federally certified Russian court interpreter providing detailed transcript-versus-audio audits and expert declarations for motions to reopen, BIA appeals, and petitions for review based on interpretation error.">
+    <meta name="twitter:image" content="https://www.interpreteraudit.com/ya-og-1200x630.png">
 
     <!-- Fonts -->
     <link href="https://fonts.googleapis.com/css2?family=Libre+Baskerville:wght@700&family=Source+Sans+Pro:wght@400;600;700&display=swap" rel="stylesheet">
@@ -40,6 +65,19 @@
         .navbar-brand,
         .nav-link {
             color: white !important;
+        }
+
+        .navbar-brand-gif {
+            height: 64px;
+            width: auto;
+            display: block;
+            object-fit: contain;
+        }
+
+        @media (max-width: 576px) {
+            .navbar-brand-gif {
+                height: 48px;
+            }
         }
 
         .nav-link:hover {
@@ -107,6 +145,18 @@
             .navbar-toggler.custom-toggler:hover .navbar-toggler-icon::after {
                 background-color: var(--navy);
             }
+        }
+
+        .visually-hidden {
+            position: absolute !important;
+            width: 1px;
+            height: 1px;
+            padding: 0;
+            margin: -1px;
+            overflow: hidden;
+            clip: rect(0, 0, 0, 0);
+            white-space: nowrap;
+            border: 0;
         }
 
         /* HERO */
@@ -228,6 +278,33 @@
             text-decoration: underline;
         }
 
+        /* About / Bio section */
+        .bio-photo {
+            max-width: 320px;
+            border-radius: 12px;
+            box-shadow: 0 12px 30px rgba(15, 23, 42, 0.25);
+            object-fit: cover;
+        }
+
+        .about-badge {
+            display: inline-block;
+            font-size: 0.8rem;
+            text-transform: uppercase;
+            letter-spacing: 0.08em;
+            padding: 0.25rem 0.75rem;
+            border-radius: 999px;
+            border: 1px solid var(--gold);
+            color: var(--gold);
+            margin-bottom: 0.75rem;
+        }
+
+        /* Video */
+        .intro-video {
+            border-radius: 12px;
+            overflow: hidden;
+            box-shadow: 0 12px 30px rgba(15, 23, 42, 0.25);
+        }
+
         @media (max-width: 768px) {
             .hero h1 {
                 font-size: 2.4rem;
@@ -244,8 +321,14 @@
     <!-- NAVIGATION -->
     <nav class="navbar navbar-expand-lg fixed-top">
         <div class="container">
-            <a class="navbar-brand fs-4" href="index.html">Interpreter Audit</a>
-            
+            <!-- Brand: animated GIF logo -->
+            <a class="navbar-brand d-flex align-items-center" href="index.html">
+                <img src="interpreter_audit_hero.gif"
+                     alt="Interpreter Audit"
+                     class="navbar-brand-gif">
+                <span class="visually-hidden">Interpreter Audit</span>
+            </a>
+
             <button class="navbar-toggler custom-toggler" type="button"
                     data-bs-toggle="collapse" data-bs-target="#navbarNav"
                     aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
@@ -256,6 +339,7 @@
                 <ul class="navbar-nav ms-auto">
                     <li class="nav-item"><a class="nav-link" href="#services">Services</a></li>
                     <li class="nav-item"><a class="nav-link" href="#experience">Experience</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#about">Interpreter</a></li>
                     <li class="nav-item"><a class="nav-link" href="#sample">Sample Affidavit</a></li>
                     <li class="nav-item"><a class="nav-link" href="https://www.interpreteraudit.com/contact">Contact</a></li>
                 </ul>
@@ -266,7 +350,7 @@
     <!-- HERO -->
     <section class="hero text-center">
         <div class="container">
-            <h1>Expert Post-Hearing Interpretation Review<br>& Declaration Services</h1>
+            <h1>Expert Post-Hearing Interpretation Review<br>&amp; Declaration Services</h1>
             <p class="lead mt-4">
                 Federally certified Russian court interpreter providing detailed transcript-versus-audio audits and expert declarations
                 for motions to reopen, BIA appeals, and petitions for review based on interpretation error.
@@ -278,6 +362,27 @@
         </div>
     </section>
 
+    <!-- VIDEO INTRO -->
+    <section id="video">
+        <div class="container">
+            <h2 class="section-title text-center">How Interpreter Audit Supports Your Case</h2>
+            <div class="row justify-content-center">
+                <div class="col-lg-8">
+                    <div class="intro-video">
+                        <video class="w-100" controls preload="metadata" playsinline>
+                            <!-- Update the src/format if you convert this to MP4 for production -->
+                            <source src="FullSizeRender.MOV" type="video/quicktime">
+                            Your browser does not support the video tag. Please download the file to view it.
+                        </video>
+                    </div>
+                    <p class="text-muted mt-3 text-center small">
+                        Short overview by Zimma explaining the audit process and how interpretation errors are identified and documented.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
     <!-- SERVICES -->
     <section id="services" class="bg-light">
         <div class="container">
@@ -285,8 +390,9 @@
 
             <div class="row g-5">
                 <div class="col-lg-8 mx-auto">
-                    <div class="card p-4">
-                        <h3>Post-Hearing Transcript Audit & Expert Declaration</h3>
+                    <!-- Entire card clickable -->
+                    <a href="audit/" class="card p-4 text-decoration-none text-reset d-block" style="cursor:pointer;">
+                        <h3>Post-Hearing Transcript Audit &amp; Expert Declaration</h3>
                         <p>
                             Line-by-line comparison of the official English transcript against the original Russian audio recording.
                             Designed for motions to reopen, BIA appeals, and petitions for review where interpretation error is at issue.
@@ -297,52 +403,37 @@
                             <li>Summary of material errors affecting credibility findings or due process</li>
                             <li>Consultation on framing ineffective assistance of interpreter claims</li>
                         </ul>
-                        <a href="audit/" class="text-decoration-none" style="color:var(--gold);font-weight:600;">
-                            Learn more about the audit service →
-                        </a>
-                    </div>
+                    </a>
                 </div>
             </div>
 
             <div class="row g-4 mt-3">
                 <div class="col-md-4">
-                    <div class="card p-4 h-100">
-                        <h5>
-                            <a href="live-interpreting/" class="text-decoration-none" style="color:inherit;">
-                                Live Courtroom Interpreting
-                            </a>
-                        </h5>
+                    <a href="live-interpreting/" class="card p-4 h-100 text-decoration-none text-reset d-block" style="cursor:pointer;">
+                        <h5>Live Courtroom Interpreting</h5>
                         <p>
                             Federally certified consecutive and, where appropriate, simultaneous interpreting for immigration
                             and federal court proceedings.
                         </p>
-                    </div>
+                    </a>
                 </div>
                 <div class="col-md-4">
-                    <div class="card p-4 h-100">
-                        <h5>
-                            <a href="monitoring/" class="text-decoration-none" style="color:inherit;">
-                                Real-Time Monitoring
-                            </a>
-                        </h5>
+                    <a href="monitoring/" class="card p-4 h-100 text-decoration-none text-reset d-block" style="cursor:pointer;">
+                        <h5>Real-Time Monitoring</h5>
                         <p>
                             On-site or remote monitoring of interpreted hearings with contemporaneous notes and a post-hearing
                             summary for counsel.
                         </p>
-                    </div>
+                    </a>
                 </div>
                 <div class="col-md-4">
-                    <div class="card p-4 h-100">
-                        <h5>
-                            <a href="depositions/" class="text-decoration-none" style="color:inherit;">
-                                Deposition & Consultation Interpretation
-                            </a>
-                        </h5>
+                    <a href="depositions/" class="card p-4 h-100 text-decoration-none text-reset d-block" style="cursor:pointer;">
+                        <h5>Deposition &amp; Consultation Interpretation</h5>
                         <p>
                             Confidential interpretation for attorney–client meetings, witness preparation, depositions, and
                             settlement discussions.
                         </p>
-                    </div>
+                    </a>
                 </div>
             </div>
         </div>
@@ -355,8 +446,8 @@
             <div class="row text-center g-4">
                 <div class="col-md-4">
                     <div class="stat-box">
-                        <div class="stat-number">12+</div>
-                        <p class="fw-bold">Years Federal & Immigration Court Experience</p>
+                        <div class="stat-number">5+</div>
+                        <p class="fw-bold">Years Interpreting for Courts, Law Enforcement, Medical, and Government Agencies</p>
                     </div>
                 </div>
                 <div class="col-md-4">
@@ -367,7 +458,7 @@
                 </div>
                 <div class="col-md-4">
                     <div class="stat-box">
-                        <div class="stat-number">100+</div>
+                        <div class="stat-number">200+</div>
                         <p class="fw-bold">Court Cases Interpreted Across 10+ States (Immigration, Federal, Criminal, Civil)</p>
                     </div>
                 </div>
@@ -382,8 +473,39 @@
         </div>
     </section>
 
+    <!-- ABOUT THE INTERPRETER -->
+    <section id="about" class="bg-light">
+        <div class="container">
+            <h2 class="section-title text-center">Interpreter &amp; Founder</h2>
+            <div class="row align-items-center g-5 justify-content-center">
+                <div class="col-md-5 text-center">
+                    <img src="Zimma.JPG" alt="Zimma, Federally Certified Russian Court Interpreter" class="bio-photo img-fluid">
+                </div>
+                <div class="col-md-7">
+                    <span class="about-badge">Owner • CEO • Federally Certified Court Interpreter</span>
+                    <h3 class="mb-3">Zimma — Russian ↔ English</h3>
+                    <p>
+                        Interpreter Audit is a one-person practice. Every audit, declaration, and live assignment is handled
+                        personally by Zimma, a Federally Certified Russian court interpreter with significant experience in
+                        immigration, federal, criminal, and civil proceedings.
+                    </p>
+                    <p>
+                        The business is veteran-owned and operated: Interpreter Audit is supported by her husband, an active-duty
+                        U.S. service member, and built around the same values that govern military service—precision, integrity,
+                        and accountability.
+                    </p>
+                    <p>
+                        For each case, Zimma works directly with counsel to understand the theory of appeal, prioritize the
+                        record segments that matter most, and deliver a clear, well-documented analysis that fits into your
+                        briefing strategy.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
     <!-- SAMPLE AFFIDAVIT -->
-    <section id="sample" class="bg-light">
+    <section id="sample">
         <div class="container">
             <h2 class="section-title text-center">Sample Expert Affidavit</h2>
             <div class="row justify-content-center">
@@ -447,7 +569,7 @@
         <div class="container">
             <div class="row align-items-center gy-3">
                 <div class="col-md-6">
-                    <small>© 2025 Interpreter Audit. All rights reserved.</small>
+                    <small>© 2025 Interpreter Audit. All rights reserved. Veteran-owned and operated.</small>
                 </div>
                 <div class="col-md-6 text-md-end">
                     <small>
