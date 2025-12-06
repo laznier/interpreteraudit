@@ -257,8 +257,8 @@
                         please use the secure upload link below after we acknowledge your inquiry.
                     </p>
 
-                    <!-- CONTACT FORM via FormSubmit with small attachments -->
-                    <form action="https://formsubmit.co/cases@interpreteraudit.com"
+                    <!-- CONTACT FORM via Formspree with small attachments -->
+                    <form action="https://formspree.io/f/xkgdzyjz"
                           method="POST"
                           enctype="multipart/form-data"
                           class="mt-5">
@@ -285,7 +285,7 @@
                                 </label>
                                 <input type="file"
                                        id="attachments"
-                                       name="attachments[]"
+                                       name="attachments"
                                        class="form-control"
                                        multiple
                                        accept="application/pdf,image/*">
@@ -295,11 +295,9 @@
                                 </small>
                             </div>
 
-                            <!-- FormSubmit helpers -->
+                            <!-- Formspree helpers (optional but nice) -->
                             <input type="hidden" name="_subject" value="New Interpreter Audit case inquiry">
                             <input type="hidden" name="_template" value="table">
-                            <!-- Optional: redirect to a thank-you page -->
-                            <!-- <input type="hidden" name="_next" value="https://www.interpreteraudit.com/thank-you"> -->
 
                             <div class="col-12 text-start mt-2">
                                 <small class="text-white-50">
