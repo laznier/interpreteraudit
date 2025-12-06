@@ -266,75 +266,57 @@
                 <p class="lead text-white opacity-90">
                     Use this form to share basic case details and request a complimentary preliminary review
                     (typically returned within 48 hours).
-                </p> <!--
-                <p class="small text-white-50 mb-1">
-                    You may attach <strong>small supporting documents</strong> (for example, a scheduling notice,
-                    short written order, or brief excerpt).
-                </p>
-                <p class="small text-white-50">
-                    <strong>Do not send full hearing recordings, full transcripts, or documents containing extensive
-                    personal or medical history through this form or by regular email.</strong> For those materials,
-                    please use the secure upload link below after we acknowledge your inquiry.
-                </p> -->
+                </p> 
 
-                <!-- CONTACT FORM via Formspree with small attachments -->
-                <form action="https://formspree.io/f/xkgdzyjz"
-                      method="POST"
-                      enctype="multipart/form-data"
-                      class="mt-5">
-                    <div class="row g-3">
-                        <div class="col-md-6">
-                            <input type="text" name="name" class="form-control" placeholder="Name" required>
-                        </div>
-                        <div class="col-md-6">
-                            <input type="email" name="email" class="form-control" placeholder="Email" required>
-                        </div>
-                        <div class="col-12">
-                            <input type="text" name="firm" class="form-control" placeholder="Law firm or organization (optional)">
-                        </div>
-                        <div class="col-12">
-                            <input type="tel" name="phone" class="form-control" placeholder="Phone number (optional)">
-                        </div>
+                <!-- CONTACT FORM via Formspree -->
+                    <form action="https://formspree.io/f/xkgdzyjz"
+                        method="POST"
+                        enctype="multipart/form-data"
+                        class="mt-5">
+                        <div class="row g-3">
+                            <div class="col-md-6">
+                                <input type="text" name="name" class="form-control" placeholder="Name" required>
+                            </div>
+                            <div class="col-md-6">
+                                <input type="email" name="email" class="form-control" placeholder="Email" required>
+                            </div>
+                            <div class="col-12">
+                                <input type="text" name="firm" class="form-control" placeholder="Law firm or organization (optional)">
+                            </div>
+                            <div class="col-12">
+                                <input type="tel" name="phone" class="form-control" placeholder="Phone number (optional)">
+                            </div>
 
-                        <div class="col-12">
-                            <textarea name="message" class="form-control" rows="5"
-                                      placeholder="Brief case summary and specific needs (hearing type, date, posture, etc.)"
-                                      required></textarea>
-                        </div>
+                            <!-- NEW: Requested deadline / filing date -->
+                            <div class="col-md-6">
+                                <label for="deadline" class="form-label text-start w-100" style="color:#e5e7eb;">
+                                    Requested deadline / filing date (optional)
+                                </label>
+                                <input type="date" name="deadline" id="deadline" class="form-control">
+                            </div>
 
-                        <!-- Small attachment(s) 
-                        <div class="col-12 text-start">
-                            <label for="attachments-main" class="form-label text-white">
-                                Attach small files (optional)
-                            </label>
-                            <input type="file"
-                                   id="attachments-main"
-                                   name="attachments"
-                                   class="form-control"
-                                   multiple
-                                   accept="application/pdf,image/*">
-                            <small class="text-white-50">
-                                Please keep total size modest (e.g., a few megabytes). For large audio files or full
-                                transcripts, use the secure upload link below instead of attaching here.
-                            </small>
-                        </div> -->
+                            <div class="col-12">
+                                <textarea name="message" class="form-control" rows="5"
+                                        placeholder="Brief case summary and specific needs (hearing type, date, posture, etc.)"
+                                        required></textarea>
+                            </div>
 
-                        <!-- Formspree helpers -->
-                        <input type="hidden" name="_subject" value="New Interpreter Audit case inquiry">
-                        <input type="hidden" name="_template" value="table">
+                            <!-- Formspree helpers -->
+                            <input type="hidden" name="_subject" value="New Interpreter Audit case inquiry">
+                            <input type="hidden" name="_template" value="table">
 
-                        <div class="col-12 text-start mt-2">
-                            <small class="text-white-50">
-                                Submitting this form does not create an interpreter–client relationship and is not a request for legal advice.
-                                Case materials shared through this form are transmitted by email; highly sensitive records should instead be
-                                uploaded via the secure link below.
-                            </small>
+                            <div class="col-12 text-start mt-2">
+                                <small class="text-white-50">
+                                    Submitting this form does not create an interpreter–client relationship and is not a request for legal advice.
+                                    Case materials shared through this form are transmitted by email; highly sensitive records should instead be
+                                    uploaded via the secure link below.
+                                </small>
+                            </div>
+                            <div class="col-12">
+                                <button type="submit" class="btn btn-outline-gold px-5">Send Inquiry</button>
+                            </div>
                         </div>
-                        <div class="col-12">
-                            <button type="submit" class="btn btn-outline-gold px-5">Send Inquiry</button>
-                        </div>
-                    </div>
-                </form>
+                    </form>
 
                 <!-- SECURE UPLOAD SECTION -->
                 <div class="mt-5">

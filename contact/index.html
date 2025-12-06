@@ -226,9 +226,9 @@
 
                     <!-- CONTACT FORM via Formspree -->
                     <form action="https://formspree.io/f/xkgdzyjz"
-                          method="POST"
-                          enctype="multipart/form-data"
-                          class="mt-5">
+                        method="POST"
+                        enctype="multipart/form-data"
+                        class="mt-5">
                         <div class="row g-3">
                             <div class="col-md-6">
                                 <input type="text" name="name" class="form-control" placeholder="Name" required>
@@ -239,14 +239,22 @@
                             <div class="col-12">
                                 <input type="text" name="firm" class="form-control" placeholder="Law firm or organization (optional)">
                             </div>
-                            <!-- NEW PHONE FIELD -->
                             <div class="col-12">
                                 <input type="tel" name="phone" class="form-control" placeholder="Phone number (optional)">
                             </div>
+
+                            <!-- NEW: Requested deadline / filing date -->
+                            <div class="col-md-6">
+                                <label for="deadline" class="form-label text-start w-100" style="color:#e5e7eb;">
+                                    Requested deadline / filing date (optional)
+                                </label>
+                                <input type="date" name="deadline" id="deadline" class="form-control">
+                            </div>
+
                             <div class="col-12">
                                 <textarea name="message" class="form-control" rows="5"
-                                          placeholder="Brief case summary and specific needs (hearing type, date, posture, etc.)"
-                                          required></textarea>
+                                        placeholder="Brief case summary and specific needs (hearing type, date, posture, etc.)"
+                                        required></textarea>
                             </div>
 
                             <!-- Formspree helpers -->
@@ -265,6 +273,7 @@
                             </div>
                         </div>
                     </form>
+
 
                     <!-- SECURE UPLOAD SECTION -->
                     <div class="mt-5">
