@@ -417,3 +417,37 @@ section {
 .footer a:hover {
   text-decoration: underline;
 }
+:root {
+    /* tweak this number to match your actual navbar height */
+    --nav-height: 45px;
+}
+
+/* Any section that’s a scroll target gets some offset for the fixed nav */
+section[id] {
+    scroll-margin-top: calc(var(--nav-height) + 8px); /* +8px just for breathing room */
+}
+/* Make the logo area clearly clickable */
+.navbar-brand {
+    cursor: pointer;
+}
+
+/* Let the logo animate smoothly, but keep its original size */
+.navbar-brand img {
+    transition:
+        transform 0.15s ease,
+        filter 0.15s ease,
+        box-shadow 0.15s ease;
+}
+
+/* Hover / focus: subtle “button” reaction */
+.navbar-brand:hover img,
+.navbar-brand:focus-visible img {
+    transform: scale(1.08); /* grows slightly from its current size */
+    filter: drop-shadow(0 0 4px rgba(251, 191, 36, 0.9)); /* gold glow */
+}
+
+/* Optional: visible outline for keyboard users */
+.navbar-brand:focus-visible {
+    outline: 2px solid #fbbf24;
+    outline-offset: 2px;
+}
