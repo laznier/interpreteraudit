@@ -1,7 +1,19 @@
 // shared.js
 
 // Load shared navbar and attach behaviors
-(function() {
+(function () {
+    // 1) Preload the navbar GIF logo ONCE for every page
+    const head = document.head;
+    if (head && !head.querySelector('link[data-logo-preload="true"]')) {
+        const preload = document.createElement('link');
+        preload.rel = 'preload';
+        preload.as = 'image';
+        preload.href = '/interpreter_audit_hero.gif'; // <-- make sure this path is correct
+        preload.dataset.logoPreload = 'true';
+        head.appendChild(preload);
+    }
+
+    // 2) Existing navbar loader
     const placeholder = document.getElementById('navbar-placeholder');
     if (!placeholder) return;
 
@@ -23,11 +35,13 @@
             // Get the collapse element (now that it's loaded)
             const navbarCollapse = document.querySelector('.navbar-collapse');
 
+            if (!navbarCollapse) return; // safety check
+
             // Close on nav link click (for mobile)
             const navLinks = document.querySelectorAll('.navbar-nav .nav-link');
             navLinks.forEach(link => {
                 link.addEventListener('click', () => {
-                    if (navbarCollapse && navbarCollapse.classList.contains('show')) {
+                    if (navbarCollapse.classList.contains('show')) {
                         new bootstrap.Collapse(navbarCollapse).hide();
                     }
                 });
@@ -36,9 +50,12 @@
             // Close on click/tap outside (for mobile/touchscreens)
             document.addEventListener('click', function(event) {
                 const toggler = document.querySelector('.navbar-toggler');
-                if (navbarCollapse.classList.contains('show') && 
-                    !toggler.contains(event.target) && 
-                    !navbarCollapse.contains(event.target)) {
+                if (
+                    navbarCollapse.classList.contains('show') &&
+                    toggler &&
+                    !toggler.contains(event.target) &&
+                    !navbarCollapse.contains(event.target)
+                ) {
                     new bootstrap.Collapse(navbarCollapse).hide();
                 }
             });
@@ -54,6 +71,7 @@
             console.error('Failed to load navbar:', err);
         });
 })();
+
 // Intercept Formspree submissions and redirect to /thank-you/
 (function() {
     const forms = document.querySelectorAll('form[action="https://formspree.io/f/xkgdzyjz"]');
